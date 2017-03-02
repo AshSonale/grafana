@@ -10,3 +10,6 @@ docker run -i -t --name gfbuild \
   -e "CIRCLE_TAG=${CIRCLE_TAG}" \
   -e "CIRCLE_BUILD_NUM=${CIRCLE_BUILD_NUM}" \
   grafana/buildcontainer
+
+sudo chown -R ${USER:=$(/usr/bin/id -run)}:$USER dist
+#sudo chown -R ubuntu:ubuntu dist
